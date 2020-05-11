@@ -1,0 +1,10 @@
+[Unit]
+Description=bluetooth on after suspend
+After=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bluetoothctl -- power on
+
+[Install]
+WantedBy=suspend.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=bluetooth sleep at suspend
+Before=suspend.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/bluetoothctl -- power off
+
+[Install]
+WantedBy=suspend.target

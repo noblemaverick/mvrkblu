@@ -1,0 +1,4 @@
+#!/bin/sh
+sleep 1
+chmod a+w /sys/class/backlight/intel_backlight/brightness
+echo 15000 >/sys/class/backlight/intel_backlight/brightness
