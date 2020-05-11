@@ -1,0 +1,10 @@
+#!/bin/bash
+sleep 1 &
+unimatrix --hold &
+termite --hold -e "neofetch" &
+termite --hold -e "top" &
+termite --hold -e "unimatrix" &
+termite --hold -e "tree" &
+termite --hold -e "figlet 'Nothing is real'" &
+
+

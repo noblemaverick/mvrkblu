@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#Exits i3 using dmenu
+[ $(echo -e "No.\nYes." | dmenu -i -p "$1") \
+== "Yes." ] && $2

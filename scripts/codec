@@ -1,0 +1,14 @@
+#!/bin/bash
+#opens basic c coding document in code-oss
+SCRIPT_FOLDER="$HOME/code/c"
+SCRIPT_FILE="$SCRIPT_FOLDER/$1.c"
+
+if [[   -f $SCRIPT_FILE    ]]; then
+    echo c file already exists
+else
+    echo '#include <stdio.h>' > $SCRIPT_FILE && echo '#include <stdlib.h>' >> $SCRIPT_FILE
+    echo '//Created by: Filipe Freire' >> $SCRIPT_FILE
+    echo 'int main(){' >> $SCRIPT_FILE && echo '    ' >> $SCRIPT_FILE && echo '}' >> $SCRIPT_FILE
+    
+    code $SCRIPT_FILE
+fi

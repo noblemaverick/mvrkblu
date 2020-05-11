@@ -1,0 +1,18 @@
+#!/bin/bash
+
+declare -a VA
+VA="$(wmctrl -l|awk '{$3=""; $2=""; print $1}')"
+for i in ${VA[@]}
+do 
+    i3-msg [id="$i"] floating enabled
+    i3-msg [id="$i"] move position center
+done
+#for i in ${!VA[@]}
+#do 
+#    if (( $i % 2)) ==; then
+#        i3-msg [id="$i"] move left 500 px
+#    fi
+#    if  [! ((  $i % 2)) == 0]; then
+#        i3-msg [id="$i"] move right 500 px
+#    fi
+#done

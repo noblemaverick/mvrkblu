@@ -1,0 +1,9 @@
+#!/bin/bash
+#execute gcc and outputs using ./a.out
+SCRIPT_FOLDER="$HOME/code/c"
+SCRIPT_FILE="$SCRIPT_FOLDER/$1.c"
+
+if [[   -f $SCRIPT_FILE    ]]; then
+    gcc $SCRIPT_FILE && ./a.out
+    echo "      "
+fi

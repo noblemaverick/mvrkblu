@@ -1,0 +1,8 @@
+#!/bin/bash
+SCRIPT_FOLDER="$HOME/code/cpp"
+SCRIPT_FILE="$SCRIPT_FOLDER/$1.cpp"
+
+if [[ -f $SCRIPT_FILE  ]]; then
+    g++ $SCRIPT_FILE -lGL -lGLU -lglut && ./a.out
+    echo "  "
+fi

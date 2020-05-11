@@ -1,0 +1,5 @@
+#!/bin/bash
+cd $(pwd) &&
+dmenu -b -nb '#091b2b' -sf '#d4af37' -fn 'Hermit-10'
+
+#i3-dmenu-desktop --dmenu="dmenu -b -nb '#091b2b' -sf '#d4af37' -fn 'Hermit-10'"

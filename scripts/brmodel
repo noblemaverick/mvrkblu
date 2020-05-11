@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /home/mvrkfriar/docs/SecondYear/BD/brmodelo/brModelo 
+java -jar brModelo.jar

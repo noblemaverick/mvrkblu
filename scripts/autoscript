@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SCRIPT_FOLDER="$HOME/scripts"
+SCRIPT_FILE="$SCRIPT_FOLDER/$1"
+
+#touch $SCRIPT_FILE
+
+if [[ -f $SCRIPT_FILE ]]; then
+	echo file already exists
+else
+	echo '#!/bin/bash' > $SCRIPT_FILE
+	chmod +x $SCRIPT_FILE
+	code $SCRIPT_FILE
+fi
+#touch $1
